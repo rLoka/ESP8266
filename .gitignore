@@ -1,0 +1,13 @@
+CommandAndControlNode/Release/
+CommandAndControlNode/core/
+CommandAndControlNode/libraries/
+CommandAndControlNode/.settings/
+ExecuteNode/Release/
+ExecuteNode/core/
+ExecuteNode/libraries/
+ExecuteNode/.settings/
+.project
+.cproject
+.ino.cpp
+.xml
+.prefs
