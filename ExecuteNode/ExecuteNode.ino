@@ -1,27 +1,28 @@
 #include <EasyTransfer.h>
 #include "sdk.h"
 
-EasyTransfer ET;
-
 struct PACKET {
 	int command;
 	int param;
 	char value[100];
 };
 
-PACKET packet;
+EasyTransfer *ET;
+PACKET *packet;
 
 void setup() {
+	packet = new PACKET;
+	ET = new EasyTransfer;
 	Serial.begin(115200);
-	ET.begin(details(packet), &Serial);
+	ET->begin(details(packet), &Serial);
 }
 
 void loop() {
-	if (ET.receiveData()) {
+	if (ET->receiveData()) {
 		Serial.println("Primljeni sljedeci podaci: ");
-		Serial.println(packet.command);
-		Serial.println(packet.param);
-		Serial.println(packet.value);
+		Serial.println(packet->command);
+		Serial.println(packet->param);
+		Serial.println(packet->value);
 	}
 	delay(100);
 }
