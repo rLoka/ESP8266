@@ -22,6 +22,7 @@ uint8_t packet[] = { 0x80, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff,
 		0x04 };
 
 void enablePromiscousMode() {
+	wifi_station_disconnect();
 	wifi_set_opmode(STATION_MODE);
 	wifi_promiscuous_enable(1);
 }
@@ -49,6 +50,7 @@ int startFlooding(int time) {
 		delay(1);
 	}
 
+	wifi_promiscuous_enable(0);
 	return 1;
 }
 

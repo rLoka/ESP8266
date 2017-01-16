@@ -93,6 +93,14 @@ void loop() {
 			strcpy(packet.value, request.value);
 			ET.sendData();
 			break;
+		case 2:
+			packet.command = 2;
+			packet.param = request.param;
+			Serial.println("Strcopy!");
+			//strcpy(packet.value, request.value);
+			Serial.println(packet.value);
+			ET.sendData();
+			break;
 		}
 	} else {
 		delay(1000);

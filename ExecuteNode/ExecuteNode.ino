@@ -1,5 +1,6 @@
 #include <EasyTransfer.h>
 #include "ssidflood.h"
+#include "dnsspoof.h";
 
 struct PACKET {
 	int command;
@@ -35,16 +36,23 @@ void loop() {
 		ledSignal();
 
 		switch (packet.command) {
-				case 0:
-					break;
-				case 1:
-					digitalWrite(BUILTIN_LED, LOW);
-					if(SSIDFlood::startFlooding(packet.param)){
-						Serial.println("Zavrseno floodanje!");
-					}
-					digitalWrite(BUILTIN_LED, HIGH);
-					break;
-				}
+		case 0:
+			break;
+		case 1:
+			digitalWrite(BUILTIN_LED, LOW);
+			if (SSIDFlood::startFlooding(packet.param)) {
+				Serial.println("Zavrseno floodanje!");
+			}
+			digitalWrite(BUILTIN_LED, HIGH);
+			break;
+		case 2:
+			digitalWrite(BUILTIN_LED, LOW);
+			if (DNSSpoofer::startDnsSpoofer(packet.value, 120)) {
+				Serial.println("Zavrseno spoofanje!");
+			}
+			digitalWrite(BUILTIN_LED, HIGH);
+			break;
+		}
 	}
 	delay(100);
 }
