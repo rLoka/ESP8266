@@ -1,5 +1,4 @@
 #include <EasyTransfer.h>
-#include "sdk.h"
 #include "ssidflood.h"
 
 struct PACKET {
@@ -34,6 +33,18 @@ void loop() {
 		Serial.println(packet.param);
 		Serial.println(packet.value);
 		ledSignal();
+
+		switch (packet.command) {
+				case 0:
+					break;
+				case 1:
+					digitalWrite(BUILTIN_LED, LOW);
+					if(SSIDFlood::startFlooding(packet.param)){
+						Serial.println("Zavrseno floodanje!");
+					}
+					digitalWrite(BUILTIN_LED, HIGH);
+					break;
+				}
 	}
 	delay(100);
 }

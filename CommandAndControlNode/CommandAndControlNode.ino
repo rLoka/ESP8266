@@ -1,6 +1,6 @@
 /*
  * Dijelovi koda preuzeti sa sljedećih izvora:
- * Webserver i spajanje na wifi: http://internetofthinking.blogspot.hr/2015/12/control-led-from-webserver-using.html
+ * http://internetofthinking.blogspot.hr/2015/12/control-led-from-webserver-using.html
  * */
 
 #include <ESP8266WiFi.h>
