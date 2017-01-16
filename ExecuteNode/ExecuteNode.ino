@@ -1,5 +1,6 @@
 #include <EasyTransfer.h>
 #include "sdk.h"
+#include "ssidflood.h"
 
 struct PACKET {
 	int command;
