@@ -4,3 +4,5 @@ Cilj ovog rada je istražiti mogućnosti korištenja jedne IOT platforme u tzv. 
 Korištena IOT platforma jest popularni NodeMCU v2 ESP8266 DEVKIT 1.0 (ESP12E v2 DEVKIT) mikrokontroler čija je posebnost mogućnost umrežavanja putem bežićnih WiFi mreža. 
 
 ![IOW](http://security.foi.hr/wiki/images/5/59/Node-design.jpg)
+
+http://security.foi.hr/wiki/index.php/Internet_of_Wrongs:_NodeMCU_ESP8266_SoC_u_ofenzivnoj_sigurnosti
