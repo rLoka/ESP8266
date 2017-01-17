@@ -5,4 +5,5 @@ Korištena IOT platforma jest popularni NodeMCU v2 ESP8266 DEVKIT 1.0 (ESP12E v2
 
 ![IOW](http://security.foi.hr/wiki/images/5/59/Node-design.jpg)
 
+Više o radu:
 http://security.foi.hr/wiki/index.php/Internet_of_Wrongs:_NodeMCU_ESP8266_SoC_u_ofenzivnoj_sigurnosti
